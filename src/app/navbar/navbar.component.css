@@ -1,0 +1,27 @@
+h2 {
+    font-family: Lato;
+    margin: 0 auto;
+  }
+  
+  .flexExpand {
+    flex: 1 1 auto;
+  }
+  
+  .flexSpaceBetween {
+    justify-content: space-between;
+  }
+  img{
+      height : 150px;
+      width : 150px;
+  }
+  .matToolbar{
+      height: auto;
+      background: white;
+  }
+  .texteheader {
+      color:  #0080ff;
+      font-size: 60px;
+      font-weight: normal;
+      margin: 20px;
+      padding: 0;
+  }

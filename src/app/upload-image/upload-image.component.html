@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+<div>
+    <mat-card  >
+        <form [formGroup]="myForm" >
+            <mat-card style="margin-right:41px;margin-top:2px; width: 14%;border-color: #329bd8;border-style: solid;border-width: 3px ">  
+                <mat-card-actions>
+                    <label for="fileUpload" style="font-size: 25px;">
+                        <mat-icon>file_upload</mat-icon>  
+                        UPLOAD 
+                    </label> 
+                </mat-card-actions>  
+            </mat-card>
+            <img [src]="imageUrl"  style="width:250px;height:200px;margin-top: 1em">
+            <input type="file" #Image id="fileUpload" name="Image" multiple="multiple" accept="image/*" style="display:none;" (change)="handleFileInput($event.target.files)"/>
+            <mat-card-actions > 
+                <mat-button-toggle type="submit" (click)="test()" style="margin-right:55px;margin-top: 0.2em;font-size: 30px;border-color: #329bd8;border-style: solid;border-width: 3px;" class="btn-large btn-submit" >Generate</mat-button-toggle>
+            </mat-card-actions>        
+        </form>
+    </mat-card>
+
+</div>
+
+<div [hidden] = "isShow">
+    <app-result-text  [file]="formData.Image"></app-result-text>
+</div>
+
+
